@@ -23,3 +23,7 @@ document.write(-3E310);
 document.write(10 > 2);
 
 document.write(10 < 2);
+
+console.log(2 + 4);
+
+console.log(2 + 4 > 8);
