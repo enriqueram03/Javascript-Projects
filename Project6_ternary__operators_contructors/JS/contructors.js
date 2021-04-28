@@ -11,11 +11,24 @@ function Vehicle(Make, Model, Year, Color) { // This is an object constructor
     this.Vehicle_Year = Year;
     this.Vehicle_Color = Color;
 }
-var Jack = new Vehicle("Dodge", "Viper", 2020, "Red");
+var Jack = new Vehicle("Dodge", "Viper", 2020, "Red"); //Created a person object
 var Emily = new Vehicle("Jeep", "Trail Hawk", 2019, "White and Black");
 var Erik = new Vehicle("Ford", "Pinto", 1971, "Mustard");
 function myFunction() {
-    document.getElementById("Keywords_and_Constructors").innerHTML =
+    document.getElementById("Keywords_and_Constructors").innerHTML = // something that dispays the information from the person object
     "Erik drives a " + Erik.Vehicle_Color + "-colored " +Erik.Vehicle_Model +
     " manufactured in " + Erik.Vehicle_Year;
+}
+
+function Me(First, Last, Age, Eye) {
+    this.Me_First = First;
+    this.Me_Last = Last;
+    this.Me_Age = Age;
+    this.Me_Eye = Eye;
+}
+var Enrique = new Me("Juice", "Wrld", 18, "Hazel"); 
+function Anime() {
+    document.getElementById("New_and_This").innerHTML = 
+    "I am " + Enrique.Me_First + Enrique.Me_Last + " I am " + Enrique.Me_Age + " years young and my eye's are " 
+    + Enrique.Me_Eye;
 }
