@@ -38,4 +38,22 @@ document.write(X === Y); // the compuer checks if the 2 pieces of data are equal
 
 X = 82;
 Y = "82";
-document.write(X === Y);
+document.write(X === Y); // checks if the 2 pieces of data are equal it see's they arent it comes back false
+
+document.write(5 > 2 && 10 > 4); // the &&  determines the logic between values and variables and but must retrun true if not it comes back false
+
+document.write(5 > 10 && 10 > 4); // since one isnt true then it would come back false
+
+document.write(5 > 10 || 10 > 4); //this is gonna come cack true since one is true if niether is true it comes back false
+
+document.write(5 > 10 || 10 > 20); //false
+
+// the ! Not operator checks whether something is true or not if its false true will be returned
+
+function not_Function() {
+    document.getElementById("Not").innerHTML = !(20 > 10); // this returns false
+}
+
+function not_function() {
+    document.getElementById("not").innerHTML = !(5 > 10);
+}
