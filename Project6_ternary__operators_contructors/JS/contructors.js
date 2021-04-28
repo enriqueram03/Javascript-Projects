@@ -32,3 +32,13 @@ function Anime() {
     "I am " + Enrique.Me_First + Enrique.Me_Last + " I am " + Enrique.Me_Age + " years young and my eye's are " 
     + Enrique.Me_Eye;
 }
+
+function count_Function() {
+    document.getElementById("Counting").innerHTML = Count();
+    function Count() {
+        var Starting_point = 9;
+        function Plus_one() {Starting_point += 1;}
+        Plus_one(); // this was the nested function, functions have funtions available to them in the code,and a nested function is a function under another function that is connected somehow
+        return Starting_point;
+    }
+}
