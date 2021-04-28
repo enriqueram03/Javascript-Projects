@@ -55,5 +55,5 @@ function not_Function() {
 }
 
 function not_function() {
-    document.getElementById("not").innerHTML = !(5 > 10);
+    document.getElementById("not").innerHTML = !(5 > 10); // this returns true
 }
