@@ -13,7 +13,6 @@ function Add_numbers_3() { // this is a local variable it is only accessed by th
     document.write(30 + Y + "<br>");
 }
 function Add_numbers_4() {
-    var Y = 10;
     document.write(Y + 100);
     }
 Add_numbers_3();
@@ -28,3 +27,13 @@ function Add_numbers_6() {
     }
 Add_numbers_5();
 Add_numbers_6();
+
+if (1 < 2) { // working off if statements
+    document.write("The left number is smaller than the number on the.")
+}
+
+function get_Date(){ // The Date().getHours() method returns the hour in the specified date according to the local time, and the hours are listed as integers between 0 and 23 like how 18 is equal to 6:00 or 12 is noon
+    if (new Date().getHours() < 18) {
+        document.getElementById("Greeting").innerHTML = "How are you today?";
+    }
+}
