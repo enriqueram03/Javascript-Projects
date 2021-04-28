@@ -43,3 +43,12 @@ function count_Function() {
     }
 }
 
+function JCOLE() {
+    document.getElementById("Nested_Function").innerHTML = Bas();
+    function Bas() {
+        var e = 4;
+        function Dreamville() {e += 5;}
+        Dreamville();
+        return e;        
+    }
+}
