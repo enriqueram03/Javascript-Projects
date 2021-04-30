@@ -24,3 +24,13 @@ function Talking() {
     var e = str.search("Portland");
     document.getElementById("Adults").innerHTML = e;
 }
+
+function string_Method() {
+    var X = 182;
+    document.getElementById("Numbers_to_string").innerHTML = X.toString();
+} 
+
+function precision_Method() {
+    var X = 12938.3012987376112;
+    document.getElementById("Precision").innerHTML = X.toPrecision(10);
+}
