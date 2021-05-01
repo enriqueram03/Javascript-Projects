@@ -34,3 +34,15 @@ function precision_Method() {
     var X = 12938.3012987376112;
     document.getElementById("Precision").innerHTML = X.toPrecision(10);
 }
+
+function Smash() {
+    var num = 5.56789;
+    var n = num.toFixed(2);
+    document.getElementById("Number").innerHTML = n;
+}
+
+function values() {
+    var str = "Hello World!";
+    var res = str.valueOf();
+    document.getElementById("value").innerHTML = res;
+  }
