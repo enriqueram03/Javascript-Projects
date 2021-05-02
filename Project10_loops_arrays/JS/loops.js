@@ -48,5 +48,26 @@ document.write(X);
 
 var X = 10;
 X = 7;
-document.write(X); // it would display 7 the browser shows which ever value comes later
+document.write(Y); // it would display 7 the browser shows which ever value comes later
 // you can reassign an identifier after using var, but you cannot do so after const, a constant cannot share its name with a function or a variable in the same scope.
+
+var X = 82;
+document.write(Z);
+{
+    let X = 33; // let declares variables that can have block scope.
+    document.write("<br>" + Z);
+}
+document.write("<br>" + Z);
+
+var E = 82;
+document.write(X)
+{
+    var E = 33;
+    document.write("<br>" + E);
+}
+document.write("<br>" + E); // This is because the var keyword cannot have block scope (access limited to inside the block), while the let keyword can.
+
+function returner() {
+    return Math.PI;
+}
+document.getElementById("demo").innerHTML = returner();
