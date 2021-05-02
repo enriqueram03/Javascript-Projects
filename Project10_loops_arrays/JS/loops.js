@@ -35,8 +35,8 @@ function cat_pics() {
 }
 
 function constant_function() {
-    const Musical_Instrument = {type:"guitar", brand:"Fender", color:"black"};
-    Musical_Instrument.color = "blue";
+    const Musical_Instrument = {type:"guitar", brand:"Fender", color:"black"}; //the value assigned by the const keyword is not immutable yet the variable identifier cannot be reassigned
+    Musical_Instrument.color = "blue"; //created an object with the const keyword and then added a property with a value, it also changed the "black" value for the color property to blue
     Musical_Instrument.price = "$900";
     document.getElementById("Constant").innerHTML = "The cost of the " +
         Musical_Instrument.type + " was " + Musical_Instrument.price;
