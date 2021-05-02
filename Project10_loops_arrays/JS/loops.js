@@ -41,3 +41,12 @@ function constant_function() {
     document.getElementById("Constant").innerHTML = "The cost of the " +
         Musical_Instrument.type + " was " + Musical_Instrument.price;
 }
+
+const X = 10; // If i got rid of the X = 10 2 would display if i took out the X = 2 10 would display
+X = 2;
+document.write(X);
+
+var X = 10;
+X = 7;
+document.write(X); // it would display 7 the browser shows which ever value comes later
+// you can reassign an identifier after using var, but you cannot do so after const, a constant cannot share its name with a function or a variable in the same scope.
