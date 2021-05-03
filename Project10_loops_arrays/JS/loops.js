@@ -42,30 +42,30 @@ function constant_function() {
         Musical_Instrument.type + " was " + Musical_Instrument.price;
 }
 
-const X = 10; // If i got rid of the X = 10 2 would display if i took out the X = 2 10 would display
-X = 2;
-document.write(X);
+const P = 10; // If i got rid of the X = 10 2 would display if i took out the X = 2 10 would display
+P = 2;
+document.write(P);
 
-var X = 10;
-X = 7;
-document.write(Y); // it would display 7 the browser shows which ever value comes later
+var U = 10;
+U = 7;
+document.write(U); // it would display 7 the browser shows which ever value comes later
 // you can reassign an identifier after using var, but you cannot do so after const, a constant cannot share its name with a function or a variable in the same scope.
 
-var X = 82;
-document.write(Z);
+var R = 82;
+document.write(W);
 {
-    let X = 33; // let declares variables that can have block scope.
-    document.write("<br>" + Z);
+    let R = 33; // let declares variables that can have block scope.
+    document.write("<br>" + W);
 }
-document.write("<br>" + Z);
+document.write("<br>" + W);
 
-var E = 82;
-document.write(X)
+var Q = 82;
+document.write(A)
 {
-    var E = 33;
-    document.write("<br>" + E);
+    var Q = 33;
+    document.write("<br>" + Q);
 }
-document.write("<br>" + E); // This is because the var keyword cannot have block scope (access limited to inside the block), while the let keyword can.
+document.write("<br>" + Q); // This is because the var keyword cannot have block scope (access limited to inside the block), while the let keyword can.
 
 function returner() {
     return Math.PI;
