@@ -217,3 +217,16 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
     // this line waits 1 second. then clears canvas resets the game and allows clicking again
     setTimeout(function () { clear(); resetGame(); }, 1000);
 }
+
+// this function resets the game in the event of a tie or a win
+function resetGame() {
+    // this for loop iterates through each html square element
+    for (let i = 0; i < 9; i++) {
+        //this variable gets the html element of i
+        let square = document.getElementById(String(i))
+        // this removes our element backround image
+        square.style.backroundImage = ''
+    }
+    // this resets our array so it is empty and we can start over
+    selectedSquares = [];
+}
