@@ -61,12 +61,11 @@ function placeXOrO(squareNumber) {
                     // this lines calls the function
                     placeXOrO(pickASquare);
                     // this changes our boolean and ends the loop
-                    succes = true;
+                    success = true;
                 };          
             }
         }
     }
-}
 
 //This function parses the selectedSquares array to search for win conditions.
 // drawWinLine function is called to draw line if condition is met
@@ -92,7 +91,7 @@ function checkWinConditions() {
     // O 3, 4, 5 condition
     else if (arrayIncludes('3O', '4O', '5O')) { drawWinLine(50, 304, 558, 304) }
     // O 6,  7, 8 condition
-    else if (arrayIncludes('60', '7X', '8X')) { drawWinLine(50, 508, 558, 508) }
+    else if (arrayIncludes('6O', '7O', '8O')) { drawWinLine(50, 508, 558, 508) }
     // O 0, 3, 6 condition
     else if (arrayIncludes('0O', '3O', '6O')) { drawWinLine(100, 50, 100, 558) }
     // O 1, 4, 7 condition
@@ -121,7 +120,7 @@ function checkWinConditions() {
         const c = selectedSquares.includes(squareC)
         // if the 3 variables we pass are all included in our array true is
         // returned and our else if condition executes the drawWinLine function
-        if (a === true && b === && c === true) { return true }
+        if (a === true && b === true && c === true) { return true }
     }
     
 }
@@ -152,7 +151,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
         // this line indicates where the start of a lines x axis is
         let x1 = coordX1,
         // this line indicates where the start of a lines y axis is
-        let y1 = coordY1,
+        y1 = coordY1,
         // this line indicates where the end of a lines x axis is
         x2 = coordX2,
         // this line indicates where the end of a lines y axis is
@@ -160,7 +159,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
         // this variable temperarily stores temporary x axis data we update in our animation loop
         x = x1,
         // this variable temperarily stores temporary y axis data we update in our animation loop
-        y = y1,
+        y = y1;
 
 
     // this function interacts with the canvas
@@ -173,6 +172,8 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
         c.beginPath();
         // this method moves us to a starting point for our line 
         c.lineTo(x1, y1)
+        c.moveTo(x1,y1)
+        c.lineTo(x,y)
         // this methods indicates the end point in our line
         c.lineWidth = 10;
         // this method sets the color of our line
@@ -187,14 +188,14 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
             if (y < y2) { y += 10; }
             // this condition cancels our animation loop
             // if we've reach the end points
-            if (x >= x2 && y >= y2) { cancelAnimationFrame(animateLoop); }
+            if (x >= x2 && y >= y2) { cancelAnimationFrame(animationLoop); }
         }
         // this condition is similar to the one above
         // this is necessary for the 6, 4, 2 win condition
         if (x1 <= x2 && y1 >= y2) {
             if (x < x2) { x += 10; }
             if (y > y2) { y -= 10; }
-            if (x >= x2 && y <= y2) { cancelAnimationFrame(animateLoop); }
+            if (x >= x2 && y <= y2) { cancelAnimationFrame(animationLoop); }
         }
     }
     
@@ -225,7 +226,7 @@ function resetGame() {
         //this variable gets the html element of i
         let square = document.getElementById(String(i))
         // this removes our element backround image
-        square.style.backroundImage = ''
+        square.style.backgroundImage = ''
     }
     // this resets our array so it is empty and we can start over
     selectedSquares = [];
