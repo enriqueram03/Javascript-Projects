@@ -56,3 +56,29 @@ function getTopping(runningTotal,text1) {
     document.getElementById("totalPrice").innerHTML = "<h3>Total: <strong>$"+
         runningTotal+".00"+"</strong></h3>";
 }
+
+function getVeggies(runningTotal,text2) {
+    var veggieTotal = 0;
+    var selectedVeggies = [];
+    var veggieArray = document.getElementsByClassName("Veggies");
+    for (var v = 0; v < veggieArray.length; v++) {
+        if (veggieArray[v].checked) {
+            selectedVeggies.push(veggieArray[v].value);
+            console.log("selected Veggie item: ("+veggieArray[v].value+")");
+            text2 = text2+veggieArray[v].value+"<br>";
+        }
+    }
+    var veggieCount = selectedVeggies.length;
+    if (veggieCount > 1) {
+        veggieTotal = (veggieCount - 1);
+    } else {
+        veggieTotal = 0;
+    }
+    runningTotal = (runningTotal + veggieTotal);
+    console.log("total selected Veggie items: "+veggieCount);
+    console.log(veggieCount+" veggie - 1 free veggie = "+"$"+veggieTotal+".00");
+    console.log("veggie text2: "+text2);
+    console.log("Purchase Total: "+"$"+runningTotal+".00");
+    document.getElementById("showText").innerHTML=text2;
+    document.getElementById("totalPrice").innerHTML = "<h3>Total: <strong>$"+
+        runningTotal+".00"+"</strong></h3>";

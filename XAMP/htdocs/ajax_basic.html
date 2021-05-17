@@ -12,7 +12,21 @@
 				<input type="button" class="button" value="Get Content" id="btn_content" onclick="getContent();"/>
 			</div>
 		<script type="text/javascript">
-        
+            
+            var ajax = new XMLHttpRequest();
+
+            ajax.open('Get', 'content.html');
+
+            ajax.onreadystatechange = function() {
+                if(ajax.readyState = 4) {
+                    document.getElementById('content').innerHTML = ajax.responseText;
+                }
+            }
+
+            function getContent() {
+                ajax.send();
+                document.getElementById('bcn_content').style.display = 'none';
+            }
 			
 		</script>
     </body>
